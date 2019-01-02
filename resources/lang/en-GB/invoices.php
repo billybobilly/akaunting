@@ -65,7 +65,7 @@ return [
     ],
 
     'notification' => [
-        'message'           => 'You are receiving this email because you have an upcoming :amount invoice to :customer customer.',
+        'message'           => 'You are receiving this email because you have a new invoice in the amount of :amount .',
         'button'            => 'Pay Now',
     ],
 

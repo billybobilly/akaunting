@@ -48,6 +48,7 @@
                 decimal : '{{ $currency->decimal_mark }}',
                 precision : {{ $currency->precision }},
                 allowZero : true,
+                allowNegative: true,
                 @if($currency->symbol_first)
                 prefix : '{{ $currency->symbol }}'
                 @else
@@ -85,6 +86,7 @@
                         decimal : data.decimal_mark,
                         precision : data.precision,
                         allowZero : true,
+                        allowNegative: true,
                         prefix : (data.symbol_first) ? data.symbol : '',
                         suffix : (data.symbol_first) ? '' : data.symbol
                     });
