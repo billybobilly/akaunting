@@ -14,7 +14,7 @@
             <strong>{{ setting('general.company_name') }}</strong><br>
             {!! nl2br(setting('general.company_address')) !!}<br>
             @if (setting('general.company_tax_number'))
-                {{ trans('general.tax_number') }}: {{ setting('general.company_tax_number') }}<br>
+<!--                {{ trans('general.tax_number') }}: {{ setting('general.company_tax_number') }}<br> -->
             @endif
             <br>
             @if (setting('general.company_phone'))
@@ -37,7 +37,7 @@
             @stack('address_input_end')
             @stack('tax_number_input_start')
             @if ($invoice->customer_tax_number)
-                {{ trans('general.tax_number') }}: {{ $invoice->customer_tax_number }}<br>
+<!--                {{ trans('general.tax_number') }}: {{ $invoice->customer_tax_number }}<br> -->
             @endif
             @stack('tax_number_input_end')
             <br>
