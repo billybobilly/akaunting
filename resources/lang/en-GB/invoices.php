@@ -66,7 +66,7 @@ return [
 
     'notification' => [
         'message'           => 'You are receiving this email because you have a new invoice in the amount of :amount .',
-        'button'            => 'Pay Now',
+        'button'            => 'View in Browser',
     ],
 
 ];
