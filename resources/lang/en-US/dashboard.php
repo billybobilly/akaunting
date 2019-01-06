@@ -2,7 +2,7 @@
 
 return [
 
-    'total_incomes'             => 'Total Incomes',
+    'total_incomes'             => 'Total Income',
     'receivables'               => 'Receivables',
     'open_invoices'             => 'Open Invoices',
     'overdue_invoices'          => 'Overdue Invoices',
