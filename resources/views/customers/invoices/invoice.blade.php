@@ -28,7 +28,7 @@
 
         <div class="row">
             <div class="col-xs-7">
-                {{ trans('invoices.bill_to') }}
+                {{ trans('invoices.bill_to') }}<br>
                 <address>
                     <strong>{{ $invoice->customer_name }}</strong><br>
                     {{ $invoice->customer_address }}<br>

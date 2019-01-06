@@ -39,8 +39,8 @@
 
             <div class="row">
                 <div class="col-xs-7">
-                    {{ trans('invoices.bill_to') }}
-                    <address>
+                    {{ trans('invoices.bill_to') }}<br>
+                    <address style="float: left;white-space: pre-line;">
                         <strong>{{ $invoice->customer_name }}</strong><br>
                         {{ $invoice->customer_address }}<br>
                         <!--@if ($invoice->customer_tax_number)
