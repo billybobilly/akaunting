@@ -12,6 +12,7 @@ table {
 th, td {
     text-align: left;
     padding: 8px;
+    font-size: 12;
 }
 
 .row {
@@ -31,7 +32,7 @@ th, td {
 }
 
 .text {
-    font-size: 16px;
+    font-size: 12px;
 }
 
 .text-right {
@@ -57,7 +58,7 @@ th, td {
 }
 
 .logo {
-    max-width: 430px;
+    max-width: 350px;
     max-height: 120px;
 }
 
@@ -66,6 +67,7 @@ th, td {
     border-collapse: collapse;
     table-layout: fixed;
     border: 1px solid #ccc;
+    font-size: 12;
 }
 
 .lines thead tr {
