@@ -29,10 +29,10 @@
                     <address>
                         <strong>{{ setting('general.company_name') }}</strong><br>
                         {{ setting('general.company_address') }}<br>
-                        @if (setting('general.company_tax_number'))
+                        <!--@if (setting('general.company_tax_number'))
                             {{ trans('general.tax_number') }}: {{ setting('general.company_tax_number') }}<br>
                         @endif
-                        <br>
+                        <br> -->
                         @if (setting('general.company_phone'))
                             {{ setting('general.company_phone') }}<br>
                         @endif
@@ -47,10 +47,10 @@
                     <address>
                         <strong>{{ $invoice->customer_name }}</strong><br>
                         {{ $invoice->customer_address }}<br>
-                        @if ($invoice->customer_tax_number)
+                        <!--@if ($invoice->customer_tax_number)
                             {{ trans('general.tax_number') }}: {{ $invoice->customer_tax_number }}<br>
                         @endif
-                        <br>
+                        <br> -->
                         @if ($invoice->customer_phone)
                             {{ $invoice->customer_phone }}<br>
                         @endif
