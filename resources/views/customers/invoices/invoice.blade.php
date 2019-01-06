@@ -103,9 +103,9 @@
                 @if ($invoice->notes)
                     <p class="lead">{{ trans_choice('general.notes', 2) }}</p>
 
-                    <p class="text-muted well well-sm no-shadow" style="margin-top: 10px;">
+                    <pre class="text-muted well well-sm no-shadow" style="float: left;white-space: pre-line;margin-top: 10px;">
                         {{ $invoice->notes }}
-                    </p>
+                    </pre>
                 @endif
             </div>
             <div class="col-xs-5">
