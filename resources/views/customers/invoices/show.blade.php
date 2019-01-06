@@ -27,8 +27,8 @@
                         {{ setting('general.company_address') }}<br>
                         <!--@if (setting('general.company_tax_number'))
                             {{ trans('general.tax_number') }}: {{ setting('general.company_tax_number') }}<br>
-                        @endif-->
-                        <br>
+                        @endif
+                        <br>-->
                         @if (setting('general.company_phone'))
                             {{ setting('general.company_phone') }}<br>
                         @endif
