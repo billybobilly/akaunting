@@ -21,7 +21,7 @@ class Dashboard extends Controller
     use Currencies, DateTime;
 
     public $today;
-    
+
     // get any custom financial year beginning
     public $financial_start;
 
@@ -113,8 +113,10 @@ class Dashboard extends Controller
 
         $total_progress = 100;
 
-        if (!empty($open_profit) && !empty($overdue_profit)) {
-            $total_progress = (int) ($open_profit * 100) / ($open_profit + $overdue_profit);
+        if (!empty($open_profit) && !empty($overdue_profit) && ($open_profit + $overdue_profit)!=0) {
+          // add test for when openprofit plus overdue profit are equal to 0
+          // then you can't do this calculation because it will divide by zero
+          $total_progress = (int) ($open_profit * 100) / ($open_profit + $overdue_profit);
         }
 
         $total_profit = array(
