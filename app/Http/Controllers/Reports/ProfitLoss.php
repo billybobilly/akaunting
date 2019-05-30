@@ -89,7 +89,13 @@ class ProfitLoss extends Controller
             'currency_rate' => 1
         ];
 
-        $gross['income'] = $gross['expense'] = [1 => 0, 2 => 0, 3 => 0, 4 => 0, 'total' => 0];
+        foreach ($dates as $date) {
+            $gross['income'][$date] = 0;
+            $gross['expense'][$date] = 0;
+        }
+
+        $gross['income']['total'] = 0;
+        $gross['expense']['total'] = 0;
 
         foreach ($income_categories as $category_id => $category_name) {
             $compares['income'][$category_id]['total'] = [
@@ -174,7 +180,7 @@ class ProfitLoss extends Controller
     private function setAmount(&$totals, &$compares, $items, $type, $date_field)
     {
         foreach ($items as $item) {
-            if (($item['table'] == 'bill_payments') || ($item['table'] == 'invoice_payments')) {
+            if (($item->getTable() == 'bill_payments') || ($item->getTable() == 'invoice_payments')) {
                 $type_item = $item->$type;
 
                 $item->category_id = $type_item->category_id;

@@ -35,7 +35,6 @@ class Settings extends Controller
 
         $setting->put('company_logo', Media::find($setting->pull('company_logo')));
         $setting->put('invoice_logo', Media::find($setting->pull('invoice_logo')));
-        $setting->put('financial_start', $this->getFinancialStart()->format('d F'));
 
         $timezones = $this->getTimezones();
 
@@ -161,11 +160,6 @@ class Settings extends Controller
                 $this->oneCompany($key, $value);
             }
 
-            // Format financial year
-            if ($key == 'financial_start') {
-                $value = Date::parse($value)->format('d-m');
-            }
-
             setting()->set('general.' . $key, $value);
         }
 
@@ -193,6 +187,9 @@ class Settings extends Controller
                 break;
             case 'session_handler':
                 Installer::updateEnv(['SESSION_DRIVER' => $value]);
+                break;
+            case 'schedule_time':
+                Installer::updateEnv(['APP_SCHEDULE_TIME' => '"' . $value . '"']);
                 break;
         }
     }

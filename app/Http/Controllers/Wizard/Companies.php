@@ -19,10 +19,6 @@ class Companies extends Controller
      */
     public function edit()
     {
-        if (setting('general.wizard', false)) {
-            return redirect('/');
-        }
-
         $company = Company::find(session('company_id'));
 
         $company->setSettings();
@@ -33,7 +29,6 @@ class Companies extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  Company  $company
      * @param  Request  $request
      *
      * @return Response
@@ -69,11 +64,6 @@ class Companies extends Controller
                 if (empty($value)) {
                     continue;
                 }
-            }
-
-            // Format financial year
-            if ($key == 'financial_start') {
-                $value = Date::parse($value)->format('d-m');
             }
 
             setting()->set('general.' . $key, $value);
